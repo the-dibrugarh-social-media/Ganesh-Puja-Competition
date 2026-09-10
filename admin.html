@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<meta name="theme-color" content="#5A1620" />
+<meta name="robots" content="noindex, nofollow" />
+<title>Admin — Ganesh Puja 2026 Votes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,500;1,600&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#FBF1E0; --paper:#FFFAF0; --maroon:#7A1F2B; --maroon-dark:#5A1620;
+    --vermilion:#D6482F; --gold:#E8A33D; --gold-deep:#C9861F; --teal:#1F5C4E;
+    --ink:#2B1810; --ink-soft:#6b4f42; --line:#e8d9bd;
+    --radius-sm:10px; --radius-md:14px; --radius-lg:20px;
+    --shadow-sm:0 3px 10px -4px rgba(90,22,32,0.15);
+    --shadow-md:0 8px 22px -8px rgba(90,22,32,0.22);
+    --shadow-lg:0 16px 34px -12px rgba(40,8,12,0.5);
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;overflow-x:hidden;}
+  body{
+    background:
+      radial-gradient(circle at 15% 0%, rgba(232,163,61,0.10) 0%, transparent 45%),
+      radial-gradient(circle at 85% 15%, rgba(31,92,78,0.08) 0%, transparent 40%),
+      var(--cream);
+    color:var(--ink); font-family:'Inter',sans-serif;
+    line-height:1.5; -webkit-font-smoothing:antialiased;
+    padding-bottom:env(safe-area-inset-bottom);
+  }
+  h1,h2,h3{font-family:'Poppins',sans-serif; color:var(--maroon-dark); margin:0;}
+  ::selection{background:var(--gold);color:var(--maroon-dark);}
+  .wrap{max-width:640px; margin:0 auto; padding:0 clamp(10px,4vw,20px) 48px;}
+
+  /* ---------- gate screen ---------- */
+  #gate{
+    min-height:100vh; display:flex; align-items:center; justify-content:center;
+    padding:20px;
+  }
+  .gate-box{
+    background:var(--paper); border:1px solid var(--line); border-radius:var(--radius-lg);
+    padding:28px 22px; max-width:340px; width:100%; text-align:center;
+    box-shadow:var(--shadow-md);
+  }
+  .gate-box .icon{font-size:30px; display:block; margin-bottom:8px;}
+  .gate-box h1{font-size:19px;}
+  .gate-box p{font-size:12.5px; color:var(--ink-soft); margin:8px 0 16px;}
+  .gate-box input{
+    width:100%; padding:12px; border:1.5px solid var(--line); border-radius:var(--radius-sm);
+    font-family:'Inter',sans-serif; font-size:14px; margin-bottom:10px;
+    background:#fffefb; color:var(--ink);
+  }
+  .gate-box input:focus{outline:none; border-color:var(--gold); box-shadow:0 0 0 3px rgba(232,163,61,0.25);}
+  .gate-box button{
+    width:100%; background:linear-gradient(90deg,var(--vermilion),var(--maroon));
+    color:#fff8ec; font-family:'Poppins',sans-serif; font-weight:700; font-size:14px;
+    padding:12px; border:none; border-radius:var(--radius-md); cursor:pointer;
+    box-shadow:var(--shadow-sm);
+  }
+  .gate-error{color:var(--vermilion); font-size:12px; margin-top:8px; display:none; font-weight:600;}
+
+  /* ---------- dashboard ---------- */
+  #dashboard{display:none;}
+  .topbar{
+    padding:20px 0 12px; display:flex; align-items:center; justify-content:space-between; gap:10px;
+  }
+  .topbar h1{font-size:18px;}
+  .topbar .sub{font-size:11.5px; color:var(--ink-soft); margin-top:2px;}
+  .btn-ghost{
+    background:none; border:1.5px solid var(--maroon); color:var(--maroon-dark);
+    font-family:'Inter',sans-serif; font-size:11.5px; font-weight:600; padding:7px 12px;
+    border-radius:20px; cursor:pointer;
+  }
+
+  .stat-row{display:flex; gap:10px; margin-bottom:16px; flex-wrap:wrap;}
+  .stat-card{
+    flex:1; min-width:110px; background:var(--paper); border:1px solid var(--line);
+    border-radius:var(--radius-md); padding:12px 14px; box-shadow:var(--shadow-sm);
+  }
+  .stat-card .num{font-family:'Poppins',sans-serif; font-weight:700; font-size:22px; color:var(--maroon-dark);}
+  .stat-card .label{font-size:11px; color:var(--ink-soft); margin-top:2px;}
+
+  .search-box{position:relative; margin-bottom:16px;}
+  .search-box input{
+    width:100%; padding:11px 12px 11px 34px; border:1.5px solid var(--line);
+    border-radius:var(--radius-sm); font-size:13.5px; font-family:'Inter',sans-serif; background:#fffefb;
+  }
+  .search-box input:focus{outline:none; border-color:var(--gold); box-shadow:0 0 0 3px rgba(232,163,61,0.25);}
+  .search-box .ic{position:absolute; left:12px; top:50%; transform:translateY(-50%); color:var(--ink-soft); font-size:14px;}
+
+  .pandal-group{
+    background:var(--paper); border:1px solid var(--line); border-radius:var(--radius-lg);
+    margin-bottom:12px; overflow:hidden; box-shadow:var(--shadow-sm);
+  }
+  .pandal-group-head{
+    display:flex; align-items:center; justify-content:space-between; gap:10px;
+    padding:12px 14px; cursor:pointer; background:#fff8ea;
+  }
+  .pandal-group-head .name{font-size:13.5px; font-weight:700; color:var(--ink);}
+  .pandal-group-head .area{font-size:11px; color:var(--ink-soft);}
+  .pandal-group-head .count{
+    font-family:'Poppins',sans-serif; background:var(--maroon-dark); color:#fce8c8;
+    padding:3px 10px; border-radius:20px; font-size:12px; font-weight:700; flex:none;
+  }
+  .voter-list{display:none; padding:6px 14px 12px;}
+  .pandal-group.open .voter-list{display:block;}
+  .voter-row{
+    display:flex; align-items:center; justify-content:space-between; gap:8px;
+    padding:7px 0; border-bottom:1px solid var(--line); font-size:12.5px;
+  }
+  .voter-row:last-child{border-bottom:none;}
+  .voter-row .handle{font-weight:600; color:var(--ink);}
+  .voter-row .time{color:var(--ink-soft); font-size:11px; flex:none;}
+  .voter-row .right{display:flex; align-items:center; gap:8px; flex:none;}
+  .dq-btn{
+    font-family:'Inter',sans-serif; font-size:10.5px; color:var(--vermilion); background:none;
+    border:1px solid var(--vermilion); border-radius:14px; padding:3px 8px; cursor:pointer;
+    flex:none; white-space:nowrap;
+  }
+  .dq-btn:disabled{opacity:0.5; cursor:default;}
+  .copy-btn{
+    font-family:'Inter',sans-serif; font-size:11px; color:var(--teal); background:none;
+    border:1px solid var(--teal); border-radius:16px; padding:4px 10px; cursor:pointer; margin-top:6px;
+  }
+  .followers-note{
+    font-size:11.5px; color:var(--ink-soft); background:#fff8ea; border:1px solid var(--line);
+    border-radius:var(--radius-sm); padding:10px 12px; margin-bottom:14px;
+  }
+  .empty-note{font-size:12.5px; color:var(--ink-soft); text-align:center; padding:30px 10px;}
+
+  /* ---------- manage pandals panel ---------- */
+  .section-toggle{
+    display:flex; align-items:center; justify-content:space-between; gap:10px;
+    cursor:pointer; user-select:none; margin-bottom:12px;
+  }
+  .section-toggle h2{font-size:15.5px;}
+  .section-toggle .chev{color:var(--ink-soft); font-size:13px; transition:transform 0.15s;}
+  .section-toggle.open .chev{transform:rotate(180deg);}
+  .pandal-panel{
+    background:var(--paper); border:1px solid var(--line); border-radius:var(--radius-lg);
+    padding:14px; margin-bottom:16px; box-shadow:var(--shadow-sm);
+  }
+  .pandal-panel .body{display:none;}
+  .pandal-panel.open .body{display:block;}
+  .pform{background:#fff8ea; border:1px solid var(--line); border-radius:var(--radius-md); padding:12px; margin-bottom:14px;}
+  .pform label{font-size:11px; color:var(--ink-soft); font-weight:600; display:block; margin:8px 0 4px;}
+  .pform label:first-child{margin-top:0;}
+  .pform input[type=text]{
+    width:100%; padding:10px; border:1.5px solid var(--line); border-radius:9px;
+    font-family:'Inter',sans-serif; font-size:13px; background:#fffefb; color:var(--ink);
+  }
+  .pform input[type=text]:focus{outline:none; border-color:var(--gold); box-shadow:0 0 0 3px rgba(232,163,61,0.25);}
+  .pform input[type=file]{
+    width:100%; font-size:12px; padding:6px 0; color:var(--ink-soft);
+  }
+  .pform .img-preview{
+    width:56px; height:56px; border-radius:9px; object-fit:cover; margin-top:8px;
+    border:1px solid var(--line); display:none;
+  }
+  .pform-actions{display:flex; gap:8px; margin-top:12px;}
+  .btn-primary{
+    flex:1; background:linear-gradient(90deg,var(--vermilion),var(--maroon)); color:#fff8ec;
+    font-family:'Poppins',sans-serif; font-weight:700; font-size:13px; padding:10px; border:none;
+    border-radius:var(--radius-sm); cursor:pointer; box-shadow:var(--shadow-sm);
+  }
+  .btn-primary:disabled{opacity:0.6; cursor:default;}
+  .btn-secondary{
+    background:none; border:1.5px solid var(--ink-soft); color:var(--ink-soft);
+    font-family:'Inter',sans-serif; font-size:12.5px; font-weight:600; padding:10px 14px;
+    border-radius:var(--radius-sm); cursor:pointer;
+  }
+  .pform-msg{font-size:11.5px; font-weight:600; margin-top:8px; display:none;}
+  .pform-msg.ok{color:var(--teal); display:block;}
+  .pform-msg.err{color:var(--vermilion); display:block;}
+  .padmin-row{
+    display:flex; align-items:center; gap:10px; padding:9px 4px;
+    border-bottom:1px solid var(--line);
+  }
+  .padmin-row:last-child{border-bottom:none;}
+  .padmin-row.hidden-pandal{opacity:0.5;}
+  .padmin-row .thumb{width:58px; height:58px; border-radius:10px; object-fit:cover; flex:none; border:1px solid var(--line);}
+  .padmin-row .thumb[src]:not([src=""]){cursor:zoom-in;}
+  .padmin-row .info{flex:1; min-width:0;}
+  .padmin-row .info .name{font-size:12.5px; font-weight:700; color:var(--ink); white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+  .padmin-row .info .area{font-size:11px; color:var(--ink-soft);}
+  .padmin-row .actions{display:flex; gap:6px; flex:none;}
+  .icon-btn{
+    font-family:'Inter',sans-serif; font-size:10.5px; background:none; border:1px solid var(--line);
+    color:var(--ink-soft); border-radius:14px; padding:4px 9px; cursor:pointer; white-space:nowrap;
+  }
+  .icon-btn.warn{border-color:var(--vermilion); color:var(--vermilion);}
+  .icon-btn.go{border-color:var(--teal); color:var(--teal);}
+</style>
+</head>
+<body>
+
+<div id="gate">
+  <div class="gate-box">
+    <span class="icon">🔒</span>
+    <h1>Admin Access</h1>
+    <p>Enter the admin password to review voter lists and manage vote records.</p>
+    <input type="password" id="pwInput" placeholder="Admin password" />
+    <button id="pwBtn">Unlock</button>
+    <div class="gate-error" id="gateError">Incorrect password.</div>
+  </div>
+</div>
+
+<div id="dashboard">
+  <div class="wrap">
+    <div class="topbar">
+      <div>
+        <h1>Vote Review</h1>
+        <div class="sub">Ganesh Puja Competition 2026</div>
+      </div>
+      <button class="btn-ghost" id="refreshBtn">Refresh</button>
+    </div>
+
+    <div class="pandal-panel" id="pandalPanel">
+      <div class="section-toggle" id="pandalToggle">
+        <h2>🏮 Manage Pandals</h2>
+        <span class="chev">▾</span>
+      </div>
+      <div class="body">
+        <div class="followers-note">
+          Add new pandals, fix names/addresses, or attach a photo any time — changes show up on the voting page as soon as it's reloaded. <strong>Hide</strong> takes a pandal off the voting list without deleting it, so you can bring it back later. <strong>Delete</strong> removes it for good.
+        </div>
+
+        <div class="pform" id="addPandalForm">
+          <label>Pandal name</label>
+          <input type="text" id="newPandalName" placeholder="e.g. New Market Sarbajanin Ganesh Mandir" />
+          <label>Area / address</label>
+          <input type="text" id="newPandalArea" placeholder="e.g. New Market, Dibrugarh" />
+          <label>Photo (optional)</label>
+          <input type="file" id="newPandalPhoto" accept="image/*" />
+          <img class="img-preview" id="newPandalPreview" alt="" />
+          <div class="pform-actions">
+            <button class="btn-primary" id="addPandalBtn">Add pandal</button>
+          </div>
+          <div class="pform-msg" id="addPandalMsg"></div>
+        </div>
+
+        <div id="pandalListContainer"><div class="empty-note">Loading pandals...</div></div>
+      </div>
+    </div>
+
+    <div class="followers-note">
+      🔎 <strong>Vote review:</strong> each voter used either a phone number or an email as their one-vote-per-person ID. Use <strong>Disqualify</strong> for obvious fraud: repeated/sequential fake-looking numbers or emails, or duplicates you can trace to the same person. It deletes the vote from the sheet immediately, so live standings update on refresh.
+    </div>
+
+    <div class="stat-row">
+      <div class="stat-card"><div class="num" id="totalVotes">–</div><div class="label">Total votes</div></div>
+      <div class="stat-card"><div class="num" id="totalPandals">–</div><div class="label">Pandals with votes</div></div>
+      <div class="stat-card"><div class="num" id="leadingPandal">–</div><div class="label">Currently leading</div></div>
+    </div>
+
+    <div class="search-box">
+      <span class="ic">🔍</span>
+      <input type="text" id="searchInput" placeholder="Filter by pandal name, phone, or email..." />
+    </div>
+
+    <div id="groupsContainer"><div class="empty-note">Loading votes...</div></div>
+  </div>
+</div>
+
+<script>
+  // Must match ADMIN_KEY in backend-apps-script.gs exactly, or admin actions will fail.
+  const ADMIN_KEY = "zafer_shah";
+  const ADMIN_PASSWORD = "ganesh_puja_2026";
+  const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbz9y-ZCdwqEo_nnROwtXEoh-ltg4Tl2HrDxGS2Sek4u7vu1sRGm3rXFJiTYchOthafZ/exec";
+
+  let allVotes = [];
+  let groupedByPandal = {};
+
+  document.getElementById("pwBtn").addEventListener("click", checkPassword);
+  document.getElementById("pwInput").addEventListener("keydown", e => { if(e.key === "Enter") checkPassword(); });
+
+  function checkPassword(){
+    const val = document.getElementById("pwInput").value;
+    if(val === ADMIN_PASSWORD){
+      document.getElementById("gate").style.display = "none";
+      document.getElementById("dashboard").style.display = "block";
+      loadVotes();
+      loadPandalsAdmin();
+    } else {
+      document.getElementById("gateError").style.display = "block";
+    }
+  }
+
+  document.getElementById("pandalToggle").addEventListener("click", () => {
+    document.getElementById("pandalPanel").classList.toggle("open");
+  });
+
+  async function loadVotes(){
+    const container = document.getElementById("groupsContainer");
+    container.innerHTML = `<div class="empty-note">Loading votes...</div>`;
+    try{
+      const res = await fetch(`${SCRIPT_URL}?admin=1&key=${encodeURIComponent(ADMIN_KEY)}`);
+      const data = await res.json();
+      if(data.status !== "success"){
+        container.innerHTML = `<div class="empty-note">Could not load votes: ${data.message || "unknown error"}</div>`;
+        return;
+      }
+      allVotes = data.votes || [];
+      buildGroups();
+      renderGroups();
+      renderStats();
+    }catch(e){
+      container.innerHTML = `<div class="empty-note">Could not reach the backend. Check SCRIPT_URL and your connection.</div>`;
+    }
+  }
+
+  function buildGroups(){
+    groupedByPandal = {};
+    allVotes.forEach(v => {
+      const key = v.pandalName || ("Pandal #" + v.pandalId);
+      if(!groupedByPandal[key]) groupedByPandal[key] = [];
+      groupedByPandal[key].push(v);
+    });
+  }
+
+  function renderStats(){
+    document.getElementById("totalVotes").innerText = allVotes.length;
+    const pandalKeys = Object.keys(groupedByPandal);
+    document.getElementById("totalPandals").innerText = pandalKeys.length;
+    let leader = "–", max = 0;
+    pandalKeys.forEach(k => { if(groupedByPandal[k].length > max){ max = groupedByPandal[k].length; leader = k; } });
+    document.getElementById("leadingPandal").innerText = leader.length > 16 ? leader.slice(0,16)+"…" : leader;
+  }
+
+  function renderGroups(filter=""){
+    const container = document.getElementById("groupsContainer");
+    container.innerHTML = "";
+    const f = filter.toLowerCase();
+
+    const sorted = Object.entries(groupedByPandal).sort((a,b) => b[1].length - a[1].length);
+
+    const visible = sorted.filter(([name, voters]) => {
+      if(!f) return true;
+      if(name.toLowerCase().includes(f)) return true;
+      return voters.some(v => (v.voterId || "").toLowerCase().includes(f));
+    });
+
+    if(visible.length === 0){
+      container.innerHTML = `<div class="empty-note">No matching votes yet.</div>`;
+      return;
+    }
+
+    visible.forEach(([name, voters]) => {
+      const group = document.createElement("div");
+      group.className = "pandal-group";
+      const displayId = v => v.voterType === "email" ? v.voterId : ("+91 " + v.voterId);
+      const idsList = voters.map(displayId).join(", ");
+      group.innerHTML = `
+        <div class="pandal-group-head">
+          <div>
+            <div class="name">${name}</div>
+            <div class="area">${voters.length} voter${voters.length===1?"":"s"}</div>
+          </div>
+          <div class="count">${voters.length}</div>
+        </div>
+        <div class="voter-list">
+          ${voters.map(v => `
+            <div class="voter-row">
+              <span class="handle">${displayId(v)}</span>
+              <span class="right">
+                <span class="time">${v.timestamp ? new Date(v.timestamp).toLocaleString() : ""}</span>
+                <button class="dq-btn" data-voter-id="${v.voterId}" data-voter-type="${v.voterType}">Disqualify</button>
+              </span>
+            </div>
+          `).join("")}
+          <button class="copy-btn" data-ids="${idsList.replace(/"/g,'&quot;')}">Copy phone/email list</button>
+        </div>
+      `;
+      group.querySelector(".pandal-group-head").addEventListener("click", () => {
+        group.classList.toggle("open");
+      });
+      group.querySelector(".copy-btn").addEventListener("click", (ev) => {
+        ev.stopPropagation();
+        navigator.clipboard.writeText(idsList);
+        ev.target.innerText = "Copied ✓";
+        setTimeout(() => { ev.target.innerText = "Copy phone/email list"; }, 1500);
+      });
+      group.querySelectorAll(".dq-btn").forEach(btn => {
+        btn.addEventListener("click", (ev) => {
+          ev.stopPropagation();
+          disqualifyVoter(btn.dataset.voterId, btn.dataset.voterType, btn);
+        });
+      });
+      container.appendChild(group);
+    });
+  }
+
+  async function disqualifyVoter(voterId, voterType, btn){
+    const display = voterType === "email" ? voterId : ("+91 " + voterId);
+    if(!confirm(`Remove ${display}'s vote? Only do this for confirmed fraud. This can't be undone.`)) return;
+    btn.disabled = true;
+    btn.innerText = "Removing...";
+    try{
+      const res = await fetch(SCRIPT_URL, {
+        method: "POST",
+        headers: {"Content-Type": "text/plain;charset=utf-8"},
+        body: JSON.stringify({ action: "disqualify", key: ADMIN_KEY, voterId: voterId, voterType: voterType })
+      });
+      const result = await res.json();
+      if(result.status === "success"){
+        allVotes = allVotes.filter(v => !(v.voterId === voterId && v.voterType === voterType));
+        buildGroups();
+        renderGroups(document.getElementById("searchInput").value);
+        renderStats();
+      } else {
+        alert(result.message || "Could not remove this vote.");
+        btn.disabled = false;
+        btn.innerText = "Disqualify";
+      }
+    }catch(e){
+      alert("Could not reach the backend. Check your connection and try again.");
+      btn.disabled = false;
+      btn.innerText = "Disqualify";
+    }
+  }
+
+  document.getElementById("searchInput").addEventListener("input", e => renderGroups(e.target.value));
+  document.getElementById("refreshBtn").addEventListener("click", loadVotes);
+
+  // ---------------------------------------------------------------
+  // Manage Pandals
+  // ---------------------------------------------------------------
+  let allPandals = [];
+
+  function fileToBase64(file){
+    return new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.onload = () => resolve(reader.result.split(",")[1]);
+      reader.onerror = reject;
+      reader.readAsDataURL(file);
+    });
+  }
+
+  document.getElementById("newPandalPhoto").addEventListener("change", (e) => {
+    const file = e.target.files[0];
+    const preview = document.getElementById("newPandalPreview");
+    if(!file){ preview.style.display = "none"; return; }
+    preview.src = URL.createObjectURL(file);
+    preview.style.display = "block";
+  });
+
+  async function loadPandalsAdmin(){
+    const container = document.getElementById("pandalListContainer");
+    container.innerHTML = `<div class="empty-note">Loading pandals...</div>`;
+    try{
+      const res = await fetch(`${SCRIPT_URL}?pandals=1`);
+      const data = await res.json();
+      if(data.status !== "success"){
+        container.innerHTML = `<div class="empty-note">Could not load pandals: ${data.message || "unknown error"}</div>`;
+        return;
+      }
+      allPandals = data.pandals || [];
+      renderPandalsAdmin();
+    }catch(e){
+      container.innerHTML = `<div class="empty-note">Could not reach the backend to load pandals.</div>`;
+    }
+  }
+
+  function renderPandalsAdmin(){
+    const container = document.getElementById("pandalListContainer");
+    container.innerHTML = "";
+    if(allPandals.length === 0){
+      container.innerHTML = `<div class="empty-note">No pandals yet — add the first one above.</div>`;
+      return;
+    }
+    allPandals.forEach(p => {
+      const row = document.createElement("div");
+      row.className = "padmin-row" + (p.active === false ? " hidden-pandal" : "");
+      row.dataset.id = p.id;
+      row.innerHTML = `
+        <img class="thumb" src="${p.img || ""}" onerror="this.style.visibility='hidden'" alt="" />
+        <div class="info">
+          <div class="name">${p.name}${p.active === false ? " (hidden)" : ""}</div>
+          <div class="area">${p.area || ""}</div>
+        </div>
+        <div class="actions">
+          <button class="icon-btn" data-act="edit">Edit</button>
+          <button class="icon-btn ${p.active === false ? "go" : "warn"}" data-act="toggle">${p.active === false ? "Show" : "Hide"}</button>
+          <button class="icon-btn warn" data-act="delete">Delete</button>
+        </div>
+      `;
+      row.querySelector('[data-act="edit"]').addEventListener("click", () => openPandalEdit(row, p));
+      row.querySelector('[data-act="toggle"]').addEventListener("click", () => togglePandalActive(p));
+      row.querySelector('[data-act="delete"]').addEventListener("click", () => deletePandal(row, p));
+      if(p.img){
+        row.querySelector(".thumb").addEventListener("click", () => {
+          window.open(p.img, "_blank", "noopener");
+        });
+      }
+      container.appendChild(row);
+    });
+  }
+
+  function openPandalEdit(row, p){
+    row.innerHTML = `
+      <div class="pform" style="width:100%; margin:6px 0;">
+        <label>Pandal name</label>
+        <input type="text" class="e-name" value="${(p.name||"").replace(/"/g,'&quot;')}" />
+        <label>Area / address</label>
+        <input type="text" class="e-area" value="${(p.area||"").replace(/"/g,'&quot;')}" />
+        <label>Replace photo (optional)</label>
+        <input type="file" class="e-photo" accept="image/*" />
+        <div class="pform-actions">
+          <button class="btn-primary e-save">Save</button>
+          <button class="btn-secondary e-cancel">Cancel</button>
+        </div>
+        <div class="pform-msg e-msg"></div>
+      </div>
+    `;
+    row.querySelector(".e-cancel").addEventListener("click", () => renderPandalsAdmin());
+    row.querySelector(".e-save").addEventListener("click", async () => {
+      const saveBtn = row.querySelector(".e-save");
+      const msg = row.querySelector(".e-msg");
+      const name = row.querySelector(".e-name").value.trim();
+      const area = row.querySelector(".e-area").value.trim();
+      const photoFile = row.querySelector(".e-photo").files[0];
+      if(!name){
+        msg.className = "pform-msg err"; msg.innerText = "Name can't be empty."; return;
+      }
+      saveBtn.disabled = true; saveBtn.innerText = "Saving...";
+      try{
+        const payload = { action:"updatePandal", key: ADMIN_KEY, id: p.id, name: name, area: area };
+        if(photoFile){
+          payload.imageBase64 = await fileToBase64(photoFile);
+          payload.imageMimeType = photoFile.type;
+          payload.imageFileName = photoFile.name;
+        }
+        const res = await fetch(SCRIPT_URL, {
+          method:"POST",
+          headers:{"Content-Type":"text/plain;charset=utf-8"},
+          body: JSON.stringify(payload)
+        });
+        const result = await res.json();
+        if(result.status === "success"){
+          await loadPandalsAdmin();
+        } else {
+          msg.className = "pform-msg err"; msg.innerText = result.message || "Could not save changes.";
+          saveBtn.disabled = false; saveBtn.innerText = "Save";
+        }
+      }catch(e){
+        msg.className = "pform-msg err"; msg.innerText = "Could not reach the backend.";
+        saveBtn.disabled = false; saveBtn.innerText = "Save";
+      }
+    });
+  }
+
+  async function togglePandalActive(p){
+    const nextActive = p.active === false;
+    try{
+      const res = await fetch(SCRIPT_URL, {
+        method:"POST",
+        headers:{"Content-Type":"text/plain;charset=utf-8"},
+        body: JSON.stringify({ action:"setPandalActive", key: ADMIN_KEY, id: p.id, active: nextActive })
+      });
+      const result = await res.json();
+      if(result.status === "success"){
+        loadPandalsAdmin();
+      } else {
+        alert(result.message || "Could not update this pandal.");
+      }
+    }catch(e){
+      alert("Could not reach the backend. Check your connection and try again.");
+    }
+  }
+
+  async function deletePandal(row, p){
+    const ok = confirm(`Permanently delete "${p.name}"?\n\nThis removes it from the list for good — it can't be undone. Votes already cast for it stay in the vote log, but the pandal itself will no longer show up here or in vote review filters.\n\nIf you just want to take it off the voting page temporarily, use Hide instead.`);
+    if(!ok) return;
+    const btn = row.querySelector('[data-act="delete"]');
+    if(btn){ btn.disabled = true; btn.innerText = "Deleting..."; }
+    try{
+      const res = await fetch(SCRIPT_URL, {
+        method:"POST",
+        headers:{"Content-Type":"text/plain;charset=utf-8"},
+        body: JSON.stringify({ action:"deletePandal", key: ADMIN_KEY, id: p.id })
+      });
+      const result = await res.json();
+      if(result.status === "success"){
+        loadPandalsAdmin();
+      } else {
+        alert(result.message || "Could not delete this pandal.");
+        if(btn){ btn.disabled = false; btn.innerText = "Delete"; }
+      }
+    }catch(e){
+      alert("Could not reach the backend. Check your connection and try again.");
+      if(btn){ btn.disabled = false; btn.innerText = "Delete"; }
+    }
+  }
+
+  document.getElementById("addPandalBtn").addEventListener("click", async () => {
+    const nameEl = document.getElementById("newPandalName");
+    const areaEl = document.getElementById("newPandalArea");
+    const photoEl = document.getElementById("newPandalPhoto");
+    const msg = document.getElementById("addPandalMsg");
+    const btn = document.getElementById("addPandalBtn");
+
+    const name = nameEl.value.trim();
+    const area = areaEl.value.trim();
+    if(!name){
+      msg.className = "pform-msg err"; msg.innerText = "Please enter a pandal name."; return;
+    }
+    btn.disabled = true; btn.innerText = "Adding...";
+    try{
+      const payload = { action:"addPandal", key: ADMIN_KEY, name: name, area: area };
+      const photoFile = photoEl.files[0];
+      if(photoFile){
+        payload.imageBase64 = await fileToBase64(photoFile);
+        payload.imageMimeType = photoFile.type;
+        payload.imageFileName = photoFile.name;
+      }
+      const res = await fetch(SCRIPT_URL, {
+        method:"POST",
+        headers:{"Content-Type":"text/plain;charset=utf-8"},
+        body: JSON.stringify(payload)
+      });
+      const result = await res.json();
+      if(result.status === "success"){
+        msg.className = "pform-msg ok"; msg.innerText = "Pandal added ✓";
+        nameEl.value = ""; areaEl.value = ""; photoEl.value = "";
+        document.getElementById("newPandalPreview").style.display = "none";
+        loadPandalsAdmin();
+      } else {
+        msg.className = "pform-msg err"; msg.innerText = result.message || "Could not add this pandal.";
+      }
+    }catch(e){
+      msg.className = "pform-msg err"; msg.innerText = "Could not reach the backend.";
+    } finally {
+      btn.disabled = false; btn.innerText = "Add pandal";
+    }
+  });
+</script>
+</body>
+</html>
