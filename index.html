@@ -852,6 +852,7 @@ async function fetchPandals() {
     const data = await res.json();
     if (data.status === "success") {
       pandals = data.pandals.filter(p => p.active);
+      pandals.sort((a, b) => a.name.localeCompare(b.name));
       renderList();
     }
   } catch(e) {
